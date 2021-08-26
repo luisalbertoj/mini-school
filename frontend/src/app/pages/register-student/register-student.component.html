@@ -1,0 +1,30 @@
+<section class="bgComponent">
+    <div class="form">
+        <mat-card class="card">
+            <mat-card-header>
+                <h1>Registro de Estudiantes</h1>
+            </mat-card-header>
+            <mat-card-content>
+                <div class="container-fluid">
+                    <div class="container">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Nombres</mat-label>
+                            <input [(ngModel)]="estudiante.nombre" matInput type="text" required/>
+                        </mat-form-field>
+                        <mat-form-field appearance="fill">
+                            <mat-label>Email</mat-label>
+                            <input [(ngModel)]="estudiante.email" matInput type="email" required/>
+                        </mat-form-field>
+                        <mat-form-field appearance="fill">
+                            <mat-label>Password</mat-label>
+                            <input [(ngModel)]="estudiante.password" matInput type="password" required/>
+                        </mat-form-field>
+                    </div>
+                </div>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-raised-button (click)="registrar()" color="accent">Registrar</button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</section>
