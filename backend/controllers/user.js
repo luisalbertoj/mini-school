@@ -6,9 +6,9 @@ const register = async (req, res) => {
         !req.body.roleId)
         return res.status(400).send('Incomplete data');
     const user = new User({
-        name: req.body.titulo,
-        email: req.body.quantity,
-        password: req.body.dateIni,
+        name: req.body.name,
+        email: req.body.email,
+        password: req.body.password,
         roleId: req.body.roleId,
         dbStatus: true,
     
