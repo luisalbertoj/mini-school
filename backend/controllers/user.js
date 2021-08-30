@@ -1,8 +1,7 @@
 const User = require("../models/user");
 
 const register = async (req, res) => {
-    let validId = mongoose.Types.ObjectId.isValid(req.body.userId);
-    if (!validId) return res.status(400).send("Invalid matter");
+ 
     if (!req.body.name || !req.body.email || !req.body.password ||
         !req.body.roleId)
         return res.status(400).send('Incomplete data');
